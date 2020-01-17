@@ -1,0 +1,96 @@
+#gen-info-container {
+    text-align: center;
+    margin: 30px 0;
+
+    h1 {
+        padding: 0 20px;
+
+        &+div {
+            width: 60%;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                text-align: justify;
+            }
+        }
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    ol {
+        text-align: left;
+        margin: 20px 30%;
+        color: $text-green;
+        padding: 0 20px;
+
+        @media screen and (max-width: 767px) {
+            margin: 20px;
+        }
+    }
+
+    #banner {
+        background-color: #fff;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin: 0 20px;
+
+            @media screen and (max-width: 767px) {
+                width: 60px;
+                height: 60px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        text-align: justify;        
+    }
+
+    #elections-1 {
+        .parallax {
+            background-image: url('/img/Bulgarian-parliament.jpg');
+        }
+    }
+
+    #elections-2 {
+        .parallax {
+            background-image: url('/img/presidential-palace.jpg');
+        }
+    }
+
+    #elections-3 {
+        .parallax {
+            background-image: url('/img/Bulgaria-municipalities.jpg');
+        }
+    }
+
+    #elections-4 {
+        .parallax {
+            background-image: url('/img/EP_Strasbourg.jpg');
+        }
+    }
+}

@@ -25,7 +25,7 @@ const startFromStorage = async () => {
     } catch (e) {
         alert('Няма такъв потребител!');
     }
-}
+};
 
 //Registration
 const register = () => {
@@ -46,12 +46,12 @@ const register = () => {
                 userView.afterLoginUI(state.user.name);
                 window.location.pathname = '';
                 await state.party.getPartyAccess();
-            } catch (e) {
-                alert(e);
+            } catch (er) {
+                alert(er);
             }
         }
     });
-}
+};
 
 
 //Login
@@ -70,7 +70,7 @@ const loginControl = async () => {
             alert(e);
         }
     }
-}
+};
 
 //Logout
 const logoutControl = async () => {
@@ -80,7 +80,7 @@ const logoutControl = async () => {
     } catch (e) {
         alert('Неуспешен изход!');
     }
-}
+};
 
 // Load profile data
 const loadProfileData = () => {
@@ -92,8 +92,8 @@ const loadProfileData = () => {
         e.preventDefault();
         try {
             await state.party.getPartyEmail();
-        } catch (e) {
-            alert(e);
+        } catch (er) {
+            alert(er);
         }
     });
 
@@ -109,12 +109,12 @@ const loadProfileData = () => {
             try {
                 await state.user.updateProfile(changes);
                 location.reload();
-            } catch (e) {
+            } catch (er) {
                 alert('Няма такъв потребител!');
             }
         }
     });
-}
+};
 
 // Voting processes
 const voteControl = () => {
@@ -122,7 +122,7 @@ const voteControl = () => {
     elements.voteInputs.change(function () {
         partyName = {
             name: this.value
-        }
+        };
         elements.voteSubmitBtn.removeAttr('disabled');
         elements.voteSubmitBtn.removeClass('disabled');
     });
@@ -135,12 +135,12 @@ const voteControl = () => {
             if (state.user.voted !== voted) {
                 elements.voteSuccessModal.click();
             }
-        } catch (e) {
-            alert(e);
+        } catch (er) {
+            alert(er);
         }
 
     });
-}
+};
 
 // FAQ Accordion handling
 const accordionControl = () => {
@@ -154,7 +154,7 @@ const accordionControl = () => {
             }
         }
     });
-}
+};
 
 // ----------------------- Event handlers --------------------------//
 
@@ -175,6 +175,13 @@ $(window).on('load', async () => {
         accordionControl();
     }
 
+    if (window.location.pathname == "/archive") {
+        $(window).scroll(function () {            
+            elements.archiveImages.addClass('animateImage');
+            // elements.archiveImages.style.display = 'block';           
+        });
+    }
+
     // Open modal
     $("#login").click(function (e) {
         e.preventDefault();
@@ -192,7 +199,7 @@ $(window).on('load', async () => {
         if (event.target == elements.modalLogin && event.target !== elements.modalLoginForm || event.target == elements.loginCloseBtn) {
             userView.closeLoginForm();
         }
-    }
+    };
 
     //Logout user
     $('#logout').click(async function (e) {

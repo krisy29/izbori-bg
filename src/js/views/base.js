@@ -18,5 +18,6 @@ export const elements = {
     voteSubmitBtn: $('#voteSubmit'),
     voteSuccessModal: $('#vote-success'),
     sendEmailDiv: $('.party-data').get()[0],
-    sendEmailBtn: $('.party-data .btn')
-}
+    sendEmailBtn: $('.party-data .btn'),
+    archiveImages: $('.toShow')
+};

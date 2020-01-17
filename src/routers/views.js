@@ -44,5 +44,13 @@ router.get("/contacts", (req, res) => {
     res.render("contacts");
 });
 
+router.get("/general-info", (req, res) => {
+    res.render("general-info");
+});
+
+router.get("/archive", (req, res) => {
+    res.render("archive");
+});
+
 
 module.exports = router;

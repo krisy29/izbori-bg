@@ -69,7 +69,7 @@ h2 {
   font-weight: 700;
   margin-bottom: 30px;
   text-transform: uppercase;
-  padding: 0 15px; }
+  padding: 0 20px; }
 
 h3 {
   font-size: 1.3rem;
@@ -643,9 +643,14 @@ ul {
   text-align: center;
   margin: 30px 0;
   padding: 0 20px; }
+  #voting-2025 h1 + div {
+    width: 60%;
+    margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      #voting-2025 h1 + div {
+        width: 100%; } }
   #voting-2025 p {
-    margin-bottom: 10px;
-    text-align: justify; }
+    margin-bottom: 10px; }
   #voting-2025 #btn-vote2 {
     background: #339900;
     background-image: linear-gradient(#eee, #339900);
@@ -757,6 +762,120 @@ ul {
         box-shadow: none;
         outline: none; }
 
+#gen-info-container {
+  text-align: center;
+  margin: 30px 0; }
+  #gen-info-container h1 {
+    padding: 0 20px; }
+    #gen-info-container h1 + div {
+      width: 60%;
+      margin: 0 auto;
+      padding: 0 20px; }
+      @media screen and (max-width: 767px) {
+        #gen-info-container h1 + div {
+          width: 100%;
+          text-align: justify; } }
+  #gen-info-container h2 {
+    margin-top: 30px; }
+  #gen-info-container p {
+    margin-bottom: 40px; }
+  #gen-info-container ol {
+    text-align: left;
+    margin: 20px 30%;
+    color: #339900;
+    padding: 0 20px; }
+    @media screen and (max-width: 767px) {
+      #gen-info-container ol {
+        margin: 20px; } }
+  #gen-info-container #banner {
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    #gen-info-container #banner h1 {
+      margin-bottom: 0;
+      padding: 0; }
+    #gen-info-container #banner img {
+      width: 80px;
+      height: 80px;
+      margin: 0 20px; }
+      @media screen and (max-width: 767px) {
+        #gen-info-container #banner img {
+          width: 60px;
+          height: 60px;
+          margin: 0 5px; } }
+  #gen-info-container .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: justify; }
+  #gen-info-container #elections-1 .parallax {
+    background-image: url("/img/Bulgarian-parliament.jpg"); }
+  #gen-info-container #elections-2 .parallax {
+    background-image: url("/img/presidential-palace.jpg"); }
+  #gen-info-container #elections-3 .parallax {
+    background-image: url("/img/Bulgaria-municipalities.jpg"); }
+  #gen-info-container #elections-4 .parallax {
+    background-image: url("/img/EP_Strasbourg.jpg"); }
+
+#archive-info {
+  text-align: justify;
+  margin: 30px 0;
+  padding: 0 20px; }
+  #archive-info h1 {
+    text-align: center; }
+  #archive-info p {
+    margin-bottom: 20px; }
+  #archive-info img {
+    display: block;
+    width: 50%;
+    margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      #archive-info img {
+        width: 100%; } }
+  #archive-info #archive-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    #archive-info #archive-flex div {
+      width: 48%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      @media screen and (max-width: 767px) {
+        #archive-info #archive-flex div {
+          width: 100%; } }
+    #archive-info #archive-flex div:first-child img {
+      width: 100%; }
+    #archive-info #archive-flex img {
+      width: 80%;
+      margin: 0 auto; }
+      @media screen and (max-width: 767px) {
+        #archive-info #archive-flex img {
+          width: 100%; } }
+
+.toShow {
+  visibility: hidden; }
+
+.animateImage {
+  visibility: visible;
+  -webkit-animation: moveimage 1s;
+  animation: moveimage 1s; }
+
+@-webkit-keyframes moveimage {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+@keyframes moveimage {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 #hero {
   height: 450px;
   background: url("/img/home-desktop.jpg") no-repeat center;
