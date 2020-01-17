@@ -1,0 +1,33 @@
+{
+  "name": "izbori-bg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js -e js, hbs",
+    "sass": "sass --watch src/scss/styles.scss:dist/css/styles.css",
+    "mongo": "/Users/KPC/mongodb/bin/mongod.exe --dbpath=/Users/KPC/mongodb-data"
+  },
+  "keywords": [],
+  "author": "Kristina Boneva",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "axios": "^0.19.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "express": "^4.17.1",
+    "hbs": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.7",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

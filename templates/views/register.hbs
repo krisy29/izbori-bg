@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/img/logo-small.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Избори България - Регистрация</title>
+</head>
+
+<body>
+    {{>login}}
+    {{>header}}
+    <div>
+        <form class="reg-profile">
+            <div class="container">
+                <h3>Данни за профила</h3>
+                <label for="name">Имена*</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Електронна поща*</label>
+                <input type="text" name="email" required>
+
+                <label for="permanentAddress">Постоянен адрес*</label>
+                <input type="text" name="permanentAddress" required>
+
+                <label for="currentAddress">Настоящ адрес</label>
+                <input type="text" name="currentAddress">
+
+                <label for="memberOf">Членство в</label>
+                <select name="memberOf">
+                    <option value="Не" selected style="color: red;">Изберете Партия</option>
+                    <option value="Лека нощ">Лека нощ</option>
+                    <option value="Нова империя">Нова империя</option>
+                    <option value="Близката гора">Близката гора</option>
+                    <option value="Златните патоци">Златните патоци</option>
+                    <option value="Скръц-скръц">Скръц-скръц</option>
+                    <option value="Коалиция за червейчета">Коалиция за червейчета</option>
+                </select>
+
+                <label for="password">Парола*</label>
+                <input type="password" name="password" required>
+
+                <label for="password2">Потвърдете паролата*</label>
+                <input type="password" name="password2" required>
+
+                <button type="submit" id="regSubmit">Регистрация</button>
+                <p id="regmessage"></p>
+            </div>
+        </form>
+    </div>
+    {{>footer}}
+    <script type="text/javascript" src="/js/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+#vote-section {
+    @extend %section-style;
+    width: 80%;
+    margin: 0 auto;
+
+    .radio-button {
+        display: block;
+        position: relative;
+        height: 120px;
+        line-height: 120px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        border: 2px dotted #4d4d4d;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked~div {
+                background-color: rgba(51, 153, 0, 0.5);
+                color: #fff;
+            }
+        }
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding-left: 120px;
+            z-index: -1;
+            font-size: 1.5rem;
+
+            @media screen and (max-width: 767px) {
+                padding-left: 96px;
+                padding-top: 15px;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 116px;
+
+            @media screen and (max-width: 767px) {
+                width: 96px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            height: 100px;
+            line-height: unset;
+        }
+    }
+
+    .btn {
+        @include btn-style(80px);
+        margin: 0 auto;
+        width: 30%;
+        font-size: 1.3rem;
+        cursor: pointer;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}
+
+#vote-success {
+    visibility: hidden;
+    display: block;
+}
+
+#mod,
+#modemail {
+    text-align: center;
+
+    h2 {
+        color: #00cc66;
+    }
+
+    p {
+        display: inline-block;
+    }
+
+    img {
+        width: 10%;
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+}

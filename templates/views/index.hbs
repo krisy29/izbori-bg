@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link rel="icon" href="/img/logo-small.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Избори България</title>
+</head>
+
+<body>
+    {{>login}}
+    {{>header}}
+    <section id="hero">
+        <div class="container-flex">
+            <div>
+                <div class="wrap-words">
+                    <h1>Добре дошли в зоната <br>на изборите!</h1>
+                    <p class="sub-heading">Тук ще намерите информация за всичко, <br>свързано с изборите в България,
+                        <br>и
+                        вашите
+                        възможности за гласуване.</p>
+                </div>
+                <a href="/voting-2025" class="btn" id="learn-more-btn">Научете още</a>
+            </div>
+        </div>
+    </section>
+    <section id="section-1">
+        <h2>Парламентарни избори 2025</h2>
+        <div class="container-flex">
+            <div class="item-1 wrap-words">
+                <div>
+                    <img src="/img/calendar.png" alt="calendar">
+                    <h3>Предстоящи избори</h3>
+                </div>
+                <div class="box-content-holder">
+                    <p id="date">16.03.2025</p>
+                    <a href="/voting-2025">
+                        <p>Всичко важно за предстоящите избори!</p>
+                    </a>
+                </div>
+            </div>
+            <div class="item-2 wrap-words">
+                <div>
+                    <img src="/img/register.png" alt="register">
+                    <h3>Регистрирани партии и коалиции</h3>
+                </div>
+                <div class="box-content-holder">
+                    <p>Разберете за кого можете да гласувате в изборния ден.</p>
+                    <p>Разгледайте и научете повече <a href="/parties-2025">ТУК</a></p>
+                </div>
+            </div>
+            <div class="item-3 wrap-words">
+                <div>
+                    <img src="/img/vote.png" alt="vote">
+                    <h3>Гласуването е активно в деня на изборите</h3>
+                </div>
+                <div class="box-content-holder">
+                    <a href="/vote" class="btn" id="btn-vote">Гласувайте</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <h2>Бъдете информирани</h2>
+        <div class="container-flex">
+            <div class="left-info">
+                <div class="item-1 wrap-words">
+                    <div>
+                        <a href="/general-info">
+                            <div>
+                                <img src="/img/elections-info.png" alt="info">
+                            </div>
+                            <h3>Видове избори в България</h3>
+                        </a>
+                    </div>
+                    <div class="box-content-holder">
+                        <p>Научете повече за изборите в България.</p>
+                    </div>
+                </div>
+                <div class="item-2 wrap-words">
+                    <div>
+                        <a href="/archive">
+                            <div>
+                                <img src="/img/elections-archive.png" alt="info">
+                            </div>
+                            <h3>Архивни данни</h3>
+                        </a>
+                    </div>
+                    <div class="box-content-holder">
+                        <p>Нека помним историята, за да не повтаряме грешките си!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-3 wrap-words">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/No13ly6I1fw" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    {{>footer}}
+    <script type="text/javascript" src="/js/bundle.js"></script>
+</body>
+
+</html>

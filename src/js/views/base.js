@@ -1,0 +1,22 @@
+export const elements = {
+    regForm: $('form.reg-profile'),
+    regSubmit: $('#regSubmit'),
+    regMessage: $('#regmessage'),
+    modalLogin: $('#id01').get()[0], 
+    modalLoginForm: $('form.modal-content').get()[0],
+    loginEmail: $(":input[name=email]").get()[0],
+    loginPass: $(":input[name=psw]").get()[0],
+    loginMessage: $('#message'),
+    loginCloseBtn: $('span.close').get()[0],
+    logInBtn: $('#login').get()[0],
+    profileBtn: $('#profile').get()[0],
+    profileBtn2: $('#profile'),
+    logOutBtn: $('#logout').get()[0],
+    readProfileInputs: $(".read-profile input[type=text]"),
+    updateProfileBtn: $('#updateSubmit'),
+    voteInputs: $("input[type=radio]"),
+    voteSubmitBtn: $('#voteSubmit'),
+    voteSuccessModal: $('#vote-success'),
+    sendEmailDiv: $('.party-data').get()[0],
+    sendEmailBtn: $('.party-data .btn')
+}
