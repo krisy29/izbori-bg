@@ -128,15 +128,17 @@ const voteControl = () => {
     });
     $('#voteSubmit').click(async function (e) {
         e.preventDefault();
-        try {
-            const voted = state.user.voted;
-            await state.user.vote(partyName);
-            await state.user.readProfile();
-            if (state.user.voted !== voted) {
+        if (state.user.voted == false) {
+            try {
+                await state.user.vote(partyName);
                 elements.voteSuccessModal.click();
+            } catch (er) {
+                alert(er);
             }
-        } catch (er) {
-            alert(er);
+        } else if (state.user.voted) {
+            alert('Вече сте гласували!');
+        } else {
+            alert('Моля, влезте в профила си!');
         }
 
     });
@@ -176,7 +178,7 @@ $(window).on('load', async () => {
     }
 
     if (window.location.pathname == "/archive") {
-        $(window).scroll(function () {            
+        $(window).scroll(function () {
             elements.archiveImages.addClass('animateImage');
             // elements.archiveImages.style.display = 'block';           
         });

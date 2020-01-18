@@ -46,7 +46,7 @@ export default class User {
             this.memberOf = res.data.memberOf;
             this.voted = res.data.voted;
         } catch (e) {
-            console.log('Няма такъв потребител!');
+            alert('Няма такъв потребител!');
         }
     }
 
@@ -58,10 +58,11 @@ export default class User {
     }
 
     async vote(name) {
-        await axios.patch('/party/vote', name)
+        const res = await axios.patch('/party/vote', name)
             .catch(function (error) {
                 alert(error.response.data.error);
             });
+            this.voted = res.data.voted;
     }
 
     async logOut() {
@@ -74,7 +75,7 @@ export default class User {
     }
 
     setAxiosToken() {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${this.token}`;
+        axios.defaults.headers.common.Authorization = `Bearer ${this.token}`;
     }
 
     persistData() {

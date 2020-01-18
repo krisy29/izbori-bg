@@ -76,21 +76,17 @@ router.patch('/party', auth, async (req, res) => {
 
 router.patch('/party/vote', auth, async (req, res) => {
     try {
-        if (req.user.voted == false) {
-            const party = await Party.findOne({
-                name: req.body.name
-            });
-            if (!party) {
-                return res.status(404).send({ error: "Няма такава партия!" });
-            }
-            party.votes++;
-            req.user.voted = true;
-            await party.save();
-            await req.user.save();
-            res.send();
-        } else {
-            return res.status(400).send({ error: "Вече сте гласували!" });
+        const party = await Party.findOne({
+            name: req.body.name
+        });
+        if (!party) {
+            return res.status(404).send({ error: "Няма такава партия!" });
         }
+        party.votes++;
+        req.user.voted = true;
+        await party.save();
+        await req.user.save();
+        res.send(req.user);
     } catch (e) {
         res.status(500).send();
     }
