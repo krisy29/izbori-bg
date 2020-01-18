@@ -16,6 +16,6 @@ const auth = async (req, res, next) => {
     } catch (e) {
         res.status(401).send({ error: 'Моля, влезте в профила си!' });
     }
-}
+};
 
 module.exports = auth;

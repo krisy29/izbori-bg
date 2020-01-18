@@ -46,7 +46,7 @@ export default class User {
             this.memberOf = res.data.memberOf;
             this.voted = res.data.voted;
         } catch (e) {
-            alert('Няма такъв потребител!');
+            console.log('Няма такъв потребител!');
         }
     }
 
