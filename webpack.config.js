@@ -7,4 +7,4 @@ module.exports = {
         filename: 'js/bundle.js'
     },
     watch: true
-}
+};

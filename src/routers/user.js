@@ -65,11 +65,11 @@ router.get('/users/me', auth, async (req, res) => {
 
 router.patch('/users/me', auth, async (req, res) => {
     const updates = Object.keys(req.body);
-    const allowedUpdates = ['name', 'email', 'password', 'permanentAddress', 'currentAddress', 'memberOf'];
+    const allowedUpdates = ['name', 'email', 'password', 'permanentAddress', 'currentAddress'];
     const isValidOperataion = updates.every((update) => allowedUpdates.includes(update));
 
     if (!isValidOperataion) {
-        return res.status(400).send({ error: 'Invalid updates!' });
+        return res.status(400).send({ error: 'Невалидна операция!' });
     }
     try {
         updates.forEach(update => req.user[update] = req.body[update]);

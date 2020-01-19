@@ -34,11 +34,11 @@ const sendMembersEmail = (ownerName, email, partyName, members) => {
             members
         }
     });
-}
+};
 
 module.exports = {
     sendWelcomeEmail,
     sendGoodbyeEmail,
     sendMembersEmail
-}
+};
 

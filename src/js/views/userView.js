@@ -6,7 +6,7 @@ export const formToJSON = elements => {
         data[elements[i].name] = elements[i].value;
     }
     return data;
-}
+};
 
 export const getLoginInput = () => {
     const data = {};
@@ -18,17 +18,17 @@ export const getLoginInput = () => {
         elements.loginMessage.text('');
         return data;
     }
-}
+};
 
 const clearLoginForm = () => {
     elements.loginEmail.value = '';
     elements.loginPass.value = '';
-}
+};
 
 export const closeLoginForm = () => {
     clearLoginForm();
     elements.modalLogin.style.display = 'none';
-}
+};
 
 export const afterLoginUI = (name) => {
     elements.logInBtn.style.display = 'none';
@@ -36,14 +36,14 @@ export const afterLoginUI = (name) => {
     const n = name.split(' ')[0];
     elements.profileBtn2.text(n);
     elements.logOutBtn.style.display = 'inline-block';
-}
+};
 
 export const afterLogoutUI = () => {
     window.location.pathname = "";
     elements.logInBtn.style.display = 'inline-block';
     elements.profileBtn.style.display = 'none';
     elements.logOutBtn.style.display = 'none';
-}
+};
 
 export const renderProfileData = (user) => {
     const arr = elements.readProfileInputs.get();
@@ -57,4 +57,4 @@ export const renderProfileData = (user) => {
             arr[i].value = '';
         }
     }
-}
+};

@@ -80,21 +80,21 @@ userSchema.statics.findByCredentials = async (email, password) => {
         throw new Error('Unable to login!');
     }
     return user;
-}
+};
 
 userSchema.methods.toJSON = function () {
     const userObject = this.toObject();
     delete userObject.password;
     delete userObject.tokens;
     return userObject;
-}
+};
 
 userSchema.methods.generateAuthToken = async function () {
     const token = jwt.sign({ _id: this._id.toString() }, process.env.JWT_SECRET);
     this.tokens = this.tokens.concat({ token });
     await this.save();
     return token;
-}
+};
 
 // Hash the plain text password before saving
 userSchema.pre('save', async function (next) {
